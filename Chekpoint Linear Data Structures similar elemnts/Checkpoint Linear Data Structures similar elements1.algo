@@ -1,0 +1,36 @@
+ALGORITHM Linear_Data_Structures_similar elements1_checkpoint 
+VAR
+    lghttab1,lghttab2,sum,i,j:INTEGER;
+    set1: ARRAY_OF INTEGER;
+    set2: ARRAY_OF INTEGER;
+BEGIN
+    REPEAT
+    Write('give lenght of set1');
+    Read(set1)
+    UNTIL (lghttab1>0);
+    REPEAT
+    Write('give lenght of set2');
+    Read(set2);
+    UNTIL (lghttab2>0)
+    i,j,sum = 0;
+    FOR i FROM 0 TO lghttab1 - 1 STEP 1  DO
+        REPEAT
+            IF (set1[i] = set2[j]) THEN
+            sum = sum + set[i];
+            Else 
+            j = j+1
+            END_IF
+        UNTIL (set1[i] <> set2[i])
+    END_FOR
+    j = 0 
+    FOR i FROM 0 TO max lghttab2 - 1 STEP 1   DO
+        REPEAT
+            IF(set[j] = set[i]) THEN
+            sum = sum + set1[j];
+            Else
+            j = j + 1;
+            END_IF
+        UNTIL (set1[j] <> set2[i])
+    END_FOR
+    Write(sum);
+END
